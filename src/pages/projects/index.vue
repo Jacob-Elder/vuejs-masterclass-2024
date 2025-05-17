@@ -19,12 +19,11 @@ const projects = ref<Tables<'projects'>[] | null>()
 <template>
   <div>
     <h1>Projects</h1>
-    <ul>
+    <ol style="list-style: circle">
       <li v-for="project in projects" :key="project.id">
         {{ project.name }}
       </li>
-    </ul>
+    </ol>
     <RouterLink to="/">Go Home</RouterLink>
-    {{ projects }}
   </div>
 </template>
